@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>متابعة حفظ القرآن الكريم — البناء المنهجي (مساق 3)</title>
+  <meta name="description" content="جدول متابعة يومي وأسبوعي لحفظ القرآن الكريم وفق برنامج البناء المنهجي، مساق 3.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand">
+        <h1>متابعة حفظ القرآن الكريم</h1>
+        <p>برنامج البناء المنهجي · مساق 3 · نبدأ الأحد 4 أكتوبر 2026</p>
+      </div>
+      <nav class="tabs" aria-label="طريقة العرض">
+        <button type="button" class="tab is-active" data-view="week">الأسبوع</button>
+        <button type="button" class="tab" data-view="map">خريطة الرحلة</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="summary" class="summary" aria-label="ملخص التقدم"></section>
+
+    <section id="weekView" aria-label="الأسبوع">
+      <div class="wk-head">
+        <div class="wk-title">
+          <h2 id="wkTitle"></h2>
+          <p id="wkSub"></p>
+        </div>
+        <div class="wk-controls">
+          <button type="button" id="prevBtn" class="btn">→ السابق</button>
+          <select id="stageSel" class="select" aria-label="اختيار المرحلة"></select>
+          <div id="pills" class="pills" aria-label="أسابيع المرحلة"></div>
+          <button type="button" id="nextBtn" class="btn">التالي ←</button>
+          <button type="button" id="todayBtn" class="btn btn-solid">الأسبوع الحالي</button>
+        </div>
+      </div>
+
+      <div id="banner" class="banner"></div>
+      <div id="grid" class="grid"></div>
+
+      <div class="week-tools">
+        <button type="button" id="resetWeekBtn" class="link-btn">تصفير علامات هذا الأسبوع</button>
+      </div>
+    </section>
+
+    <section id="mapView" class="map" aria-label="خريطة الرحلة" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <p>يُحفظ تقدّمك في متصفحك على هذا الجهاز فقط. خذ نسخة احتياطية من وقت لآخر.</p>
+      <div class="foot-actions">
+        <button type="button" id="exportBtn" class="link-btn">تصدير التقدّم</button>
+        <button type="button" id="importBtn" class="link-btn">استيراد تقدّم</button>
+        <button type="button" id="resetAllBtn" class="link-btn danger">تصفير كل شيء</button>
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
